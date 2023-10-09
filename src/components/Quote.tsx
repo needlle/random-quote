@@ -16,7 +16,7 @@ function Quote() {
   return (
     <div className="flex h-full w-full flex-col items-center justify-center">
       <div className="mx-12 mb-5 rounded-xl bg-primary md:w-2/3 lg:w-1/2 2xl:w-2/5">
-        <div className="flex select-none flex-col items-center gap-3 rounded-xl bg-quote bg-contain bg-right-bottom bg-no-repeat px-12 py-8">
+        <div className="flex flex-col items-center gap-3 rounded-xl bg-quote bg-contain bg-right-bottom bg-no-repeat px-12 py-8">
           <span className="font-bold text-white sm:text-lg">
             {quote.data?.author}
           </span>
