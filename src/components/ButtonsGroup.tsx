@@ -11,13 +11,13 @@ type ButtonsGroupProps = {
 
 function ButtonsGroup({ actions }: ButtonsGroupProps) {
   return (
-    <div className="flex">
+    <div className="flex px-5">
       {actions.map((action, index) => (
         <button
           key={index}
           className={`${index === 0 ? "rounded-l-xl" : "border-l-0"} ${
             index === actions.length - 1 ? "rounded-r-xl" : ""
-          } border-2 border-slate-800 px-3 py-2 hover:bg-slate-800`}
+          } relative border-2 border-primary px-3 py-2 hover:bg-primary`}
           onClick={() => action.onClick()}
         >
           {action.content}

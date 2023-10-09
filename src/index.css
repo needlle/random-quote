@@ -10,3 +10,16 @@
 html {
   font-family: "Outfit";
 }
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-top: -10px;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: currentColor transparent transparent transparent;
+  transform: rotate(180deg);
+}

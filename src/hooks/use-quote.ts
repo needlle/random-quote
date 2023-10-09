@@ -1,11 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import { Quote } from "../types/quote";
 
-function useQuote() {
+function useQuote(id?: string) {
   return useQuery({
-    queryKey: ["quote"],
+    queryKey: ["quote", id],
     queryFn: async (): Promise<Quote> => {
-      const response = await fetch("https://api.quotable.io/random");
+      const path = id ? `quotes/${id}` : "random";
+      const response = await fetch(`https://api.quotable.io/${path}`);
       if (response.ok) {
         return response.json();
       }
