@@ -17,7 +17,7 @@ function ButtonsGroup({ actions }: ButtonsGroupProps) {
           key={index}
           className={`${index === 0 ? "rounded-l-xl" : "border-l-0"} ${
             index === actions.length - 1 ? "rounded-r-xl" : ""
-          } relative border-2 border-primary px-3 py-2 hover:bg-primary`}
+          } relative border-2 border-accent/75 px-3 py-2 text-accent/75 hover:bg-accent/75 hover:text-primary`}
           onClick={() => action.onClick()}
         >
           {action.content}
